@@ -10,7 +10,9 @@ export default function Home() {
       >
         TailWind
       </h1>
-      <h2 className="text-3xl text-blue-200">Tailwind</h2>
+      <h2 className="text-3xl sm:text-5xl lg:text-8xl text-blue-200">
+        Tailwind
+      </h2>
       <p>Tailwind</p>
       <button
         disabled
