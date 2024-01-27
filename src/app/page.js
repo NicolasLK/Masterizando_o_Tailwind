@@ -1,22 +1,32 @@
 export default function Home() {
   return (
-    <main className="h-screen bg-red-500 p-4">
-      <h1
-        className="font-extrabold 
-      flex 
-      items-center 
-      gap-3 
-      before:w-0.5 before:h-6 before:bg-sky-600 before:flex"
-      >
-        TailWind
-      </h1>
-      <h2 className="text-3xl sm:text-5xl lg:text-8xl text-blue-200">
-        Tailwind
-      </h2>
-      <p>Tailwind</p>
-      <button
-        disabled
-        className="bg-sky-500 
+    <main
+      className="h-screen 
+    bg-slate-50 
+    p-8 
+    flex 
+    flex-col 
+    items-center 
+    text-center dark:bg-slate-900 dark:text-slate-100"
+    >
+      <div className="max-w-2xl">
+        <h1
+          className="font-extrabold 
+          text-3xl 
+          sm:text-4xl 
+          lg:text-5xl"
+        >
+          Rapidly build modern websites without ever leaving your HTML.
+        </h1>
+        <p className="mt-4 dark:text-slate-400">
+          A utility-first CSS framework packed with classes like flex, pt-4,
+          text-center and rotate-90 that can be composed to build any design,
+          directly in your markup.
+        </p>
+        <button
+          disabled
+          className="bg-sky-500  
+        text-white
         px-4 
         py-2 
         rounded-md 
@@ -25,10 +35,12 @@ export default function Home() {
         cursor-pointer
         enabled:hover:bg-sky-900 
         disabled:opacity-60 
-        disabled:cursor-not-allowed"
-      >
-        Sing In
-      </button>
+        disabled:cursor-not-allowed 
+        dark:bg-sky-400 dark:text-sky-950"
+        >
+          Sing In
+        </button>
+      </div>
     </main>
   );
 }
