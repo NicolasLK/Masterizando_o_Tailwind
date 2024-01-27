@@ -6,7 +6,11 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        App: "minmax(18rem, 20rem) 1fr",
+      },
+    },
   },
   plugins: [],
 };
