@@ -1,5 +1,6 @@
 import { Search } from "lucide-react";
 import { Logo } from "./Logo";
+import { MainNavigation } from "./MainNavigation";
 
 export function SideBar() {
   return (
@@ -11,11 +12,13 @@ export function SideBar() {
           <Search className="h-5 w-5 text-zinc-500" />
 
           <input
-            className="flex-1 border-0 bg-transparent p-0 text-zinc-900 placeholder-zinc-600"
+            className="flex-1 border-0 bg-transparent p-0 mx-1 text-zinc-900 placeholder-zinc-600"
             type="text"
             placeholder="Search"
           />
         </section>
+
+        <MainNavigation />
       </aside>
     </>
   );
