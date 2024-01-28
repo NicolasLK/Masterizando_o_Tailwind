@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateColumns: {
-        App: "minmax(18rem, 20rem) 1fr",
+        app: "minmax(18rem, 20rem) 1fr",
+        profile: "min-content 1fr min-content",
       },
     },
   },

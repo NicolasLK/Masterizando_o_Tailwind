@@ -12,6 +12,7 @@ import {
 import { Logo } from "./Logo";
 import { NavItem } from "./NavItem";
 import { UsedSpaceWidget } from "./UsedSpaceWidget";
+import { Profile } from "./Profile";
 
 export function SideBar() {
   return (
@@ -46,6 +47,10 @@ export function SideBar() {
         </section>
 
         <UsedSpaceWidget />
+
+        <hr />
+
+        <Profile />
       </aside>
     </>
   );

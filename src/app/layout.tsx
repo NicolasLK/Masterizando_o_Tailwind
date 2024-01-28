@@ -5,7 +5,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <div className="grid min-h-screen grid-cols-App">
+        <div className="grid min-h-screen grid-cols-app">
           <SideBar />
 
           <main className="px-4 pb-12 pt-8">{children}</main>
