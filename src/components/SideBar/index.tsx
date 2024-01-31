@@ -4,8 +4,8 @@ import {
   SquareStack,
   CheckSquare,
   Flag,
-  Users,
   Search,
+  Users,
   LifeBuoy,
   Cog,
 } from "lucide-react";
@@ -13,6 +13,7 @@ import { Logo } from "./Logo";
 import { NavItem } from "./NavItem";
 import { UsedSpaceWidget } from "./UsedSpaceWidget";
 import { Profile } from "./Profile";
+import * as Input from "../Input";
 
 export function SideBar() {
   return (
@@ -20,15 +21,12 @@ export function SideBar() {
       <aside className="flex flex-col gap-6 border-r border-zinc-200 px-5 py-8">
         <Logo />
 
-        <section className="flex w-full items-center gap-2 rounded-lg border border-zinc-300 px-3 py-2 shadow-sm">
-          <Search className="h-5 w-5 text-zinc-500" />
-
-          <input
-            className="flex-1 border-0 bg-transparent p-0 mx-1 text-zinc-900 placeholder-zinc-600"
-            type="text"
-            placeholder="Search"
-          />
-        </section>
+        <Input.Root>
+          <Input.Prefix>
+            <Search className="h-5 w-5 text-zinc-500" />
+          </Input.Prefix>
+          <Input.Control placeholder="Search" />
+        </Input.Root>
 
         <nav className="space-y-0.5">
           <NavItem title="Home" icon={Home} />
