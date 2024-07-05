@@ -12,6 +12,7 @@ import { FileInput } from "../components/Form/FileInput/index";
 export default function Home() {
   return (
     <>
+      <title>Masterizando Tailwind</title>
       <h1 className="text-3xl font-medium text-zinc-900">Settings</h1>
 
       <SettingsTabs />
@@ -158,7 +159,7 @@ export default function Home() {
             </label>
             <FileInput.Root>
               <FileInput.Trigger />
-              <FileInput.Control multiple/>
+              <FileInput.Control multiple />
             </FileInput.Root>
           </div>
           <div className="flex items-center justify-end gap-2 pt-5">
