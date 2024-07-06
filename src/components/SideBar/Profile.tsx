@@ -1,11 +1,8 @@
 import { LogOut } from "lucide-react";
-// import Image from "next/image";
-// import UserImg from "../../../public/UserImg.png";
 
 export function Profile() {
   return (
     <section className="grid items-center gap-3 grid-cols-profile">
-      {/* <Image src={UserImg} width={40} height={40} alt="" /> */}
       <img
         src="https://github.com/NicolasLK"
         className="h-10 w-10 rounded-full"

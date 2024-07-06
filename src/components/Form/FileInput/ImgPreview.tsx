@@ -25,13 +25,12 @@ export function ImgPreview() {
     );
   } else {
     return (
-      <>
-        <img
-          src={previewURL}
-          alt=""
-          className="h-16 w-16 rounded-full object-cover"
-        />
-      </>
+      //eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={previewURL}
+        alt=""
+        className="h-16 w-16 rounded-full object-cover"
+      />
     );
   }
 }
