@@ -14,7 +14,7 @@ export function Prefix(props: InputPrefixProps) {
 export function Control(props: InputControlProps) {
   return (
     <input
-      className="flex-1 border-0 bg-transparent p-1 mx-1 text-zinc-900 placeholder-zinc-600"
+      className="flex-1 border-0 bg-transparent p-1 text-zinc-900 placeholder-zinc-600"
       {...props}
     />
   );

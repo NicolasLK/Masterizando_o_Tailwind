@@ -10,6 +10,7 @@ import { SettingsTabs } from "../components/SettingsTabs";
 import * as Input from "../components/Input";
 import { FileInput } from "../components/Form/FileInput/index";
 import { Select } from "../components/Form/Select";
+import { SelectItem } from "../components/Form/Select/SelectItem";
 
 export default function Home() {
   return (
@@ -126,7 +127,12 @@ export default function Home() {
             >
               country
             </label>
-            <Select />
+            <Select placeholder="Select a country">
+              <SelectItem value="br" text="Brazil" />
+              <SelectItem value="jp" text="Japan" />
+              <SelectItem value="ch" text="Switzerland" />
+              <SelectItem value="cn" text="China" />
+            </Select>
           </div>
           <div className="grid gap-3 grid-cols-form pt-5">
             <label
@@ -135,7 +141,21 @@ export default function Home() {
             >
               timezone
             </label>
-            <div></div>
+            <Select placeholder="Select a timezone">
+              <SelectItem value="br-utc03" text="Brasília Time (UTC−03:00)" />
+              <SelectItem
+                value="jp-utc09"
+                text="Japan Standard Time (UTC+09:00)"
+              />
+              <SelectItem
+                value="ch-utc08"
+                text="China Standard Time (UTC+08:00)"
+              />
+              <SelectItem
+                value="cn-utc01"
+                text="Central European Time (UTC+01:00)"
+              />
+            </Select>
           </div>
           <div className="grid gap-3 grid-cols-form pt-5">
             <label
