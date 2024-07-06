@@ -13,7 +13,10 @@ interface NavItemProps {
 export function NavItem({ title, icon: Icon }: NavItemProps) {
   return (
     <>
-      <a className="group flex items-center gap-3 rounded px-3 py-2" href="">
+      <a
+        className="group flex items-center gap-3 rounded px-3 py-2 outline-none focus:border-violet-300 focus:ring-4 focus:ring-violet-100"
+        href=""
+      >
         <Icon className="h-5 w-5 text-zinc-500" />
         <span className="font-medium text-zinc-700 group-hover:text-violet-500">
           {title}
