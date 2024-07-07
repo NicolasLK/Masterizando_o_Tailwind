@@ -1,12 +1,13 @@
-'use client'
-import { Trash2, UploadCloud } from 'lucide-react'
-import { useAutoAnimate } from '@formkit/auto-animate/react'
-import { useFileInput } from './Root'
-import { formateBytes } from '../../../utils/formate-bytes'
+"use client";
+import { Trash2, UploadCloud } from "lucide-react";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
+import { useFileInput } from "./Root";
+import { formateBytes } from "../../../utils/formate-bytes";
+import { Button } from "../../Button";
 
 export function FileList() {
-  const { files } = useFileInput()
-  const [parent] = useAutoAnimate()
+  const { files } = useFileInput();
+  const [parent] = useAutoAnimate();
 
   return (
     <>
@@ -42,17 +43,14 @@ export function FileList() {
                   </div>
                 </div>
 
-                <button
-                  type="button"
-                  className="ml-auto p-2 hover:bg-zinc-50 rounded-md"
-                >
+                <Button type="button" variant="ghost">
                   <Trash2 className="h-5 w-5 text-zinc-500" />
-                </button>
+                </Button>
               </div>
             </>
-          )
+          );
         })}
       </div>
     </>
-  )
+  );
 }
