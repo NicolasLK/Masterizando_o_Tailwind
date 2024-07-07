@@ -5,22 +5,14 @@
   -> Evitar ao maximo utiliza-los
 */
 
-import {
-  Bold,
-  Italic,
-  Link,
-  List,
-  ListOrdered,
-  Mail,
-  UploadCloud,
-  User,
-} from "lucide-react";
+import { Bold, Italic, Link, List, ListOrdered, Mail } from "lucide-react";
 import { SettingsTabs } from "../components/SettingsTabs";
 import * as Input from "../components/Input";
 import { FileInput } from "../components/Form/FileInput/index";
 import { Select } from "../components/Form/Select";
 import { SelectItem } from "../components/Form/Select/SelectItem";
 import { TextArea } from "../components/Form/TextArea";
+import { Button } from "../components/Button";
 
 export default function Home() {
   return (
@@ -39,19 +31,12 @@ export default function Home() {
             </span>
           </div>
           <div className="flex items-center gap-2">
-            <button
-              type="button"
-              className="capitalize rounded-lg border px-4 py-2 text-sm font-semibold shadow-sm border-zinc-300 text-zinc-700 hover:bg-zinc-50"
-            >
+            <Button variant="outline" type="button">
               cancel
-            </button>
-            <button
-              type="submit"
-              form="settings"
-              className="capitalize rounded-lg px-4 py-2 text-sm font-semibold shadow-sm bg-violet-600 text-white hover:bg-violet-700"
-            >
+            </Button>
+            <Button variant="primary" type="submit" form="settings">
               save
-            </button>
+            </Button>
           </div>
         </div>
 
@@ -246,18 +231,12 @@ export default function Home() {
             </FileInput.Root>
           </div>
           <div className="flex items-center justify-end gap-2 pt-5">
-            <button
-              type="button"
-              className="capitalize rounded-lg border px-4 py-2 text-sm font-semibold shadow-sm border-zinc-300 text-zinc-700 hover:bg-zinc-50"
-            >
+            <Button variant="outline" type="button">
               cancel
-            </button>
-            <button
-              type="submit"
-              className="capitalize rounded-lg px-4 py-2 text-sm font-semibold shadow-sm bg-violet-600 text-white hover:bg-violet-700"
-            >
+            </Button>
+            <Button variant="primary" type="submit" form="settings">
               save
-            </button>
+            </Button>
           </div>
         </form>
       </div>
