@@ -1,19 +1,46 @@
-import { CheckCircle2, Trash2, UploadCloud } from "lucide-react";
+import { CheckCircle2, icons, Trash2, UploadCloud } from "lucide-react";
 import { formateBytes } from "../../../utils/formate-bytes";
 import { Button } from "../../Button";
+import { tv, VariantProps } from "tailwind-variants";
 
-interface FileItemProps {
+interface FileItemProps extends VariantProps<typeof fileItem> {
   name: string;
   size: number;
 }
 
-export function FileItem({ name, size }: FileItemProps) {
-  const state = "error" as "progress" | "error" | "complete";
+const fileItem = tv({
+  slots: {
+    container: "group flex items-start gap-4 rounded-lg border border-zinc-200",
+    icon: "rounded-full border-4 border-violet-100 bg-violet-200 p-2 text-violet-600",
+    deleteButton: "",
+  },
+  variants: {
+    state: {
+      progress: {
+        container: ""
+      },
+      complete: {
+        container: "border-violet-500"
+      },
+      error: {
+        container: "bg-error-25 border-error-300",
+        icon: "border-error-50 bg-error-100 text-error-600",
+        deleteButton: "text-error-700 hover:text-error-900"
+      },
+    }
+  },
+  defaultVariants: {
+    state: "progress",
+  },
+})
+
+export function FileItem({ name, size, state }: FileItemProps) {
+  const {container, icon, deleteButton} = fileItem({state})
 
   return (
     <>
-      <div className="group flex items-start gap-4 rounded-lg border border-zinc-200">
-        <div className="rounded-full border-4 border-violet-100 bg-violet-200 p-2 text-violet-600">
+      <div className={container()}>
+        <div className={icon()}>
           <UploadCloud className="h-4 w-4" />
         </div>
 
@@ -57,8 +84,8 @@ export function FileItem({ name, size }: FileItemProps) {
         {state === "complete" ? (
           <CheckCircle2 className="w-5 h-5 fill-violet-600 text-white" />
         ) : (
-          <Button type="button" variant="ghost">
-            <Trash2 className="h-5 w-5 text-zinc-500" />
+          <Button type="button" variant="ghost" className={deleteButton()}>
+            <Trash2 className="h-5 w-5" />
           </Button>
         )}
       </div>
