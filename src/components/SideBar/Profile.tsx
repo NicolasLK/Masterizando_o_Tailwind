@@ -11,10 +11,10 @@ export function Profile() {
       />
 
       <div className="flex flex-col truncate">
-        <span className="text-sm font-semibold text-zinc-700">
+        <span className="text-sm font-semibold text-zinc-700 dark:text-zinc-100">
           Nicolas Loffi Kaminski
         </span>
-        <span className="text-sm text-zinc-500 truncate">
+        <span className="text-sm text-zinc-500 truncate dark:text-zinc-400">
           nicolas.kaminski.2001@gmail.com
         </span>
       </div>
