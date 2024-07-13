@@ -18,15 +18,15 @@ export default function Home() {
   return (
     <>
       <title>Masterizando Tailwind</title>
-      <h1 className="text-3xl font-medium text-zinc-900">Settings</h1>
+      <h1 className="text-3xl font-medium text-zinc-900 dark:text-zinc-100">Settings</h1>
 
       <SettingsTabs />
 
       <div className="mt-6 flex flex-col">
-        <div className="flex flex-col justify-between gap-4 border-b border-zinc-200 pb-5 lg:flex-row lg:items-center">
+        <div className="flex flex-col justify-between gap-4 border-b border-zinc-200 pb-5 lg:flex-row lg:items-center dark:border-zinc-700">
           <div className="space-y-1">
-            <h2 className="text-lg font-medium text-zinc-900">Personal info</h2>
-            <span className="text-sm text-zinc-500">
+            <h2 className="text-lg font-medium text-zinc-900 dark:text-zinc-100">Personal info</h2>
+            <span className="text-sm text-zinc-500 dark:text-zinc-400">
               Update your photo and personal details here.
             </span>
           </div>
@@ -42,12 +42,12 @@ export default function Home() {
 
         <form
           id="settings"
-          className="mt-6 flex flex-col w-full gap-5 divide-y divide-zinc-200"
+          className="mt-6 flex flex-col w-full gap-5 divide-y divide-zinc-200 dark:divide-zinc-700"
         >
           <div className="flex flex-col gap-3 lg:grid lg:grid-cols-form">
             <label
               htmlFor="firstName"
-              className="capitalize text-sm font-medium text-zinc-700"
+              className="capitalize text-sm font-medium text-zinc-700 dark:text-zinc-300"
             >
               name
             </label>
@@ -62,7 +62,7 @@ export default function Home() {
               <div className="flex flex-col gap-3 lg:block">
                 <label
                   htmlFor="lastName"
-                  className="capitalize text-sm font-medium text-zinc-700 lg:sr-only"
+                  className="capitalize text-sm font-medium text-zinc-700 dark:text-zinc-300 lg:sr-only"
                 >
                   last name
                 </label>
@@ -75,7 +75,7 @@ export default function Home() {
           <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <label
               htmlFor="email"
-              className="capitalize text-sm font-medium text-zinc-700"
+              className="capitalize text-sm font-medium text-zinc-700 dark:text-zinc-300"
             >
               e-mail address
             </label>
@@ -94,7 +94,7 @@ export default function Home() {
           <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <label
               htmlFor="photo"
-              className="capitalize text-sm font-medium text-zinc-700"
+              className="capitalize text-sm font-medium text-zinc-700 dark:text-zinc-300"
             >
               your photo
               <span className="text-sm font-normal text-zinc-500 block mt-0.5">
@@ -111,7 +111,7 @@ export default function Home() {
           <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <label
               htmlFor="role"
-              className="capitalize text-sm font-medium text-zinc-700"
+              className="capitalize text-sm font-medium text-zinc-700 dark:text-zinc-300"
             >
               role
             </label>
@@ -126,7 +126,7 @@ export default function Home() {
           <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <label
               htmlFor="country"
-              className="capitalize text-sm font-medium text-zinc-700"
+              className="capitalize text-sm font-medium text-zinc-700 dark:text-zinc-300"
             >
               country
             </label>
@@ -140,7 +140,7 @@ export default function Home() {
           <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <label
               htmlFor="timeZone"
-              className="capitalize text-sm font-medium text-zinc-700"
+              className="capitalize text-sm font-medium text-zinc-700 dark:text-zinc-300"
             >
               timezone
             </label>
@@ -163,7 +163,7 @@ export default function Home() {
           <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <label
               htmlFor="bio"
-              className="capitalize text-sm font-medium text-zinc-700"
+              className="capitalize text-sm font-medium text-zinc-700 dark:text-zinc-300"
             >
               bio
               <span className="text-sm font-normal text-zinc-500 block mt-0.5">
@@ -210,7 +210,7 @@ export default function Home() {
           <div className="flex flex-col gap-3 pt-5 lg:grid lg:grid-cols-form">
             <label
               htmlFor="projects"
-              className="capitalize text-sm font-medium text-zinc-700"
+              className="capitalize text-sm font-medium text-zinc-700 dark:text-zinc-300"
             >
               portifolio projects
               <span className="text-sm font-normal text-zinc-500 block mt-0.5">

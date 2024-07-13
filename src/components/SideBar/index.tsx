@@ -13,11 +13,13 @@ import {
 } from "lucide-react";
 import * as Collapsible from "@radix-ui/react-collapsible"
 import { Logo } from "./Logo";
-import { NavItem } from "./NavItem";
+
 import { UsedSpaceWidget } from "./UsedSpaceWidget";
 import { Profile } from "./Profile";
 import * as Input from "../Input";
 import { Button } from "../Button";
+import { Navigation } from "./Navigation";
+import { NavItem } from "./Navigation/NavItem";
 
 export function SideBar() {
   return (
@@ -40,28 +42,16 @@ export function SideBar() {
             </Input.Prefix>
             <Input.Control placeholder="Search" />
           </Input.Root>
-
-          <nav className="space-y-0.5">
-            <NavItem title="Home" icon={Home} />
-            <NavItem title="Dashboard" icon={BarChart} />
-            <NavItem title="Projects" icon={SquareStack} />
-            <NavItem title="Tasks" icon={CheckSquare} />
-            <NavItem title="Reporting" icon={Flag} />
-            <NavItem title="Users" icon={Users} />
-          </nav>
-
+          <Navigation />
           <section className="mt-auto flex flex-col gap-6">
             <nav className="space-y-0.5">
               <NavItem title="Support" icon={LifeBuoy} />
               <NavItem title="Settings" icon={Cog} />
             </nav>
+            <UsedSpaceWidget />
+            <div className="h-px bg-zinc-200 dark:bg-zinc-800" />
+            <Profile />
           </section>
-
-          <UsedSpaceWidget />
-
-          <hr />
-
-          <Profile />
         </Collapsible.Content>
       </Collapsible.Root>
     </>
